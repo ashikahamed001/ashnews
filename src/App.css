@@ -1,0 +1,49 @@
+body {
+    background:#c8c8c8;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.searchbar{
+        
+        text-align:justify;
+        background: #000000;
+        font: inherit;
+        border: none;
+        border-radius: 3px;
+        outline:black;
+        width:80%;
+        color : rgb(255, 255, 255);
+        padding: 0.5em 1.5em;
+    }
+
+      button {
+        background: rgb(0, 0, 0);
+        color: #fff;
+        font: inherit;
+        border: none;
+        border-radius: 3px;
+        outline: none;
+        padding: 0.5em 1.5em;
+      }
+      button:active {
+        background-color: rgb(0, 0, 0);
+      }
+
+
+.footerpart{
+    text-align:right;
+    margin-top:550px;
+}
+
+.picture{
+      margin-right: 0.5em;
+      float: left;
+      box-shadow: 0px 1px 1px 1px #0002;
+     width: 300px;
+}
+
+.provider{
+     display: grid;
+}
