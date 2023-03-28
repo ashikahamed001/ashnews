@@ -44,37 +44,37 @@ class App extends React.Component {
 
 
   render() {
-    
-    const {
-      articles,
-      Error,
-      is_loading,
-      Topic,
-      totalResults
-    } = this.state;
-    
-    return (
-      <>
-       <Searchbar searchForTopic={this.searchForTopic} />
-        
-        {is_loading && (
-          <p style={{ textAlign: "center" }}>Hold on a sec..Searching for articles...</p>
-        )}
-        {articles.length > 0 && (
+  const {
+    articles,
+    Error,
+    is_loading,
+    Topic,
+    totalResults
+  } = this.state;
+
+  return (
+    <>
+      <Searchbar searchForTopic={this.searchForTopic} />
+
+      {is_loading && (
+        <p style={{ textAlign: "center" }}>Hold on a sec..Searching for articles...</p>
+      )}
+
+      {articles && articles.length > 0 && (
+        <>
           <h2>
-             {totalResults} articles are feeded 
+            Found {totalResults} articles on "{Topic}"
           </h2>
-        )}
-        
-        {articles.length > 0 && <Articles articles={articles} />}
-        {Error && <p>Couldn't find any articles on {Topic} </p>}
-        
-        <footer className = "footerpart">
-          
-        </footer>
-      </>
-    );
-  }
+          <Articles articles={articles} />
+        </>
+      )}
+
+      {Error && <p>Couldn't find any articles on {Topic} </p>}
+
+      <footer className="footerpart"></footer>
+    </>
+  );
+}
 }
 
 
